@@ -7,3 +7,6 @@ def login(request):
 
 def regist(request):
     return HttpResponse('注册')
+
+def login_logic(request):
+    return HttpResponse('登录逻辑')
