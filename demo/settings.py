@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'userapp',
     'rest_framework',
+    'api',
 ]
 
 MIDDLEWARE = [
@@ -132,7 +133,7 @@ REST_FRAMEWORK = {
     'DEFAULT_RENDERER_CLASSES': [
         'rest_framework.renderers.JSONRenderer',
         # 'rest_framework.renderers.TemplateHTMLRenderer',
-        # 'rest_framework.renderers.BrowsableAPIRenderer',
+        'rest_framework.renderers.BrowsableAPIRenderer',
     ],
     # 配置全局的解析器
     'DEFAULT_PARSER_CLASSES': [
@@ -140,5 +141,5 @@ REST_FRAMEWORK = {
         'rest_framework.parsers.FormParser',  # urlencoded数据包
         'rest_framework.parsers.MultiPartParser',  # form-data数据包
     ],
-    'EXCEPTION_HANDLER': 'userapp.utils.exception.exception_handler',
+    'EXCEPTION_HANDLER': 'utils.exception.exception_handler',
 }
